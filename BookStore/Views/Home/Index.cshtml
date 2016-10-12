@@ -1,8 +1,17 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<!-- здесь остальное содержание -->
+@section Footer {
+    Все права защищены. Syte Corp. 2012.
+}
 <div>
+    @Html.TextArea("text", "привет <br /> мир", 5, 50, null)
+
+
+
     <h3>Распродажа книг</h3>
+
     <table>
         <tr class="header">
             <td><p>Название книги</p></td>
@@ -20,4 +29,60 @@
             </tr>
         }
     </table>
+
+
+
+    @using BookStore.Helpers
+    @Html.Image("/Images/pussy.jpg", "киска")
+    @Html.Label("Некоторый текст под картинкой", "Другой текст")
+
+
+
+    <h3>Страны (html-хелпер из отдельного модуля)</h3>
+    @MyHelpers.HtmlList(new string[] { "Лондон", "Париж", "Берлин" })
+
+
+
+    @helper BookList(IEnumerable<BookStore.Models.Book> books)
+    {
+    <ul>
+        @foreach (BookStore.Models.Book b in books)
+        {
+            <li>@b.Name</li>
+        }
+    </ul>
+    }
+    <h3>Список книг (сточный html-хелпер)</h3>
+    @BookList(ViewBag.Books)
+
+
+
+
+    @helper CreateList(string[] all)
+    {
+    <ul>
+        @foreach (string s in all)
+        {
+            <li>@s</li>
+        }
+    </ul>
+}
+    @{
+        string[] cities = new string[] { "Лондон", "Париж", "Москва" };
+    }
+    @{
+        string[] countries = new string[] { "Великобритания", "Франция", "Россия" };
+    }
+        <h3>Города (второй хелпер)</h3>
+    @CreateList(cities)
+    <br />
+    <h3>Страны (второй хелпер)</h3>
+    <!-- или можно вызвать так -->
+    @using BookStore.Helpers
+    @Html.CreateList(new string[] { "Лондон", "Париж", "Берлин" }, new { @class = "btn", id = "citiesList" })
+
+
+
+    @Html.Partial("Partial", new string[] { "Russia", "USA", "Canada", "France" })
+    
 </div>

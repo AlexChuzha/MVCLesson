@@ -13,7 +13,7 @@ namespace BookStore.Controllers
     {
         // создаем контекст данных
         BookContext db = new BookContext();
-
+        
         public ActionResult Index()
         {
             // получаем из бд все объекты Book
@@ -21,7 +21,14 @@ namespace BookStore.Controllers
             // передаем все объекты в динамическое свойство Books в ViewBag
             ViewBag.Books = books;
             // возвращаем представление
+            ViewBag.Message = "Это частичное представление.";
             return View();
+        }
+
+        public ActionResult Partial()
+        {
+            ViewBag.Message = "Это частичное представление.";
+            return PartialView();
         }
 
         [HttpGet]
