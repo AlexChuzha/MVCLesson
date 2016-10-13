@@ -144,6 +144,14 @@
     <Compile Include="Util\ImageResult.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Bookstore.mdf" />
+    <Content Include="App_Data\Bookstore2.mdf" />
+    <Content Include="App_Data\Bookstore2_log.ldf">
+      <DependentUpon>Bookstore2.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\Bookstore_log.ldf">
+      <DependentUpon>Bookstore.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -182,7 +190,6 @@
     <Content Include="Views\Home\Partial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Files\" />
   </ItemGroup>
   <ItemGroup>

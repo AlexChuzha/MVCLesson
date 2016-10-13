@@ -95,5 +95,11 @@ namespace BookStore.Controllers
             return File(fs, file_type, file_name);
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
+
     }
 }
