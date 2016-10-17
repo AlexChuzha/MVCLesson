@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace NavigationProperty.Models
+namespace BookStore.Models
 {
     public class SoccerContext : DbContext
     {

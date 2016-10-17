@@ -18,7 +18,9 @@ namespace BookStore
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //
             Database.SetInitializer(new BookDbInitializer());
+            Database.SetInitializer(new SoccerDbInitializer());
         }
     }
 }

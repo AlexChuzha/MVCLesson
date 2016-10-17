@@ -1,4 +1,4 @@
-﻿namespace NavigationProperty.Models
+﻿namespace BookStore.Models
 {
     public class Player
     {
