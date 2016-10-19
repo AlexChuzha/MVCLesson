@@ -131,20 +131,33 @@
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyController.cs" />
+    <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Controllers\SoccerController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ImageHelper.cs" />
     <Compile Include="Helpers\ListHelper.cs" />
-    <Compile Include="Models\Book.cs" />
-    <Compile Include="Models\BookContext.cs" />
-    <Compile Include="Models\BookDbInitializer.cs" />
-    <Compile Include="Models\Player.cs" />
-    <Compile Include="Models\Purchase.cs" />
-    <Compile Include="Models\SoccerContext.cs" />
-    <Compile Include="Models\SoccerDbInitializer.cs" />
-    <Compile Include="Models\Team.cs" />
+    <Compile Include="Helpers\PagingHelpers.cs" />
+    <Compile Include="Models\Books\AppDbInitializer.cs" />
+    <Compile Include="Models\Books\ApplicationContext.cs" />
+    <Compile Include="Models\Books\Book.cs" />
+    <Compile Include="Models\Books\BookContext.cs" />
+    <Compile Include="Models\Books\BookDbInitializer.cs" />
+    <Compile Include="Models\Books\MenuItem.cs" />
+    <Compile Include="Models\Pages\PageInfo.cs" />
+    <Compile Include="Models\Pages\Phone.cs" />
+    <Compile Include="Models\Soccer\PlayersListViewModel.cs" />
+    <Compile Include="Models\Students\Course.cs" />
+    <Compile Include="Models\Soccer\Player.cs" />
+    <Compile Include="Models\Books\Purchase.cs" />
+    <Compile Include="Models\Soccer\SoccerContext.cs" />
+    <Compile Include="Models\Soccer\SoccerDbInitializer.cs" />
+    <Compile Include="Models\Students\CourseDbInitializer.cs" />
+    <Compile Include="Models\Students\Student.cs" />
+    <Compile Include="Models\Soccer\Team.cs" />
+    <Compile Include="Models\Students\StudentsContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\HtmlResult.cs" />
     <Compile Include="Util\ImageResult.cs" />
@@ -153,6 +166,14 @@
     <Content Include="App_Data\Bookstore.mdf" />
     <Content Include="App_Data\Bookstore_log.ldf">
       <DependentUpon>Bookstore.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\SoccerInfo.mdf" />
+    <Content Include="App_Data\SoccerInfo_log.ldf">
+      <DependentUpon>SoccerInfo.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\StudentsInfo.mdf" />
+    <Content Include="App_Data\StudentsInfo_log.ldf">
+      <DependentUpon>StudentsInfo.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -199,6 +220,15 @@
     <Content Include="Views\Book\Edit.cshtml" />
     <Content Include="Views\Book\Index.cshtml" />
     <Content Include="Views\Soccer\Index.cshtml" />
+    <Content Include="Views\Soccer\TeamDetails.cshtml" />
+    <Content Include="Views\Soccer\Create.cshtml" />
+    <Content Include="Views\Soccer\Edit.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Pages\Index.cshtml" />
+    <Content Include="Views\Soccer\List.cshtml" />
+    <Content Include="Views\Home\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Files\" />

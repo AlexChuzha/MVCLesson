@@ -12,6 +12,16 @@ namespace BookStore.Controllers
 {
     public class HomeController : Controller
     {
+
+        ApplicationContext dbM = new ApplicationContext();
+
+        public ActionResult Menu()
+        {
+            List<MenuItem> menuItems = dbM.MenuItems.ToList();
+
+            return PartialView(menuItems);
+        }
+
         // создаем контекст данных
         BookContext db = new BookContext();
         

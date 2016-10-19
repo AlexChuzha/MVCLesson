@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using BookStore.Models;
+using Students.Model;
 using System.Data.Entity;
 
 namespace BookStore
@@ -20,7 +21,9 @@ namespace BookStore
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             //
             Database.SetInitializer(new BookDbInitializer());
-            Database.SetInitializer(new SoccerDbInitializer());
+            //Database.SetInitializer(new SoccerDbInitializer());
+            Database.SetInitializer(new CourseDbInitializer());
+            Database.SetInitializer(new AppDbInitializer());
         }
     }
 }
