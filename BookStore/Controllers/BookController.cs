@@ -12,7 +12,32 @@ namespace BookStore.Controllers
 {
     public class BookController : Controller
     {
+
+
         private BookContext db = new BookContext();
+
+        public JsonResult JsonSearch(string name)
+        {
+            var jsondata = db.Books.Where(a => a.Author.Contains(name)).ToList<Book>();
+            return Json(jsondata, JsonRequestBehavior.AllowGet);
+        }
+
+        // GET: Book
+        public ActionResult BookSearchParent()
+        {
+            return View(db.Books.ToList());
+        }
+
+        [HttpPost]
+        public ActionResult BookSearch(string name)
+        {
+            var allbooks = db.Books.Where(a => a.Author.Contains(name)).ToList();
+            if (allbooks.Count <= 0)
+            {
+                return HttpNotFound();
+            }
+            return PartialView(allbooks);
+        }
 
         // GET: Book
         public ActionResult Index()

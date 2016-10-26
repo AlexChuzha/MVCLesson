@@ -7,8 +7,10 @@
 }
 <div>
     @Html.TextArea("text", "привет <br /> мир", 5, 50, null)
-
-
+    <br />
+    @Html.ActionLink("Все книги", "Index", "Book", new { id = 10 }, null)
+    <br />
+    @Html.ActionLink("Все книги", "Index", new { area = "Store", controller = "Home" })
 
     <h3>Распродажа книг</h3>
 

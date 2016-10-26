@@ -128,6 +128,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Store\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Store\Controllers\ShopController.cs" />
+    <Compile Include="Areas\Store\StoreAreaRegistration.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyController.cs" />
@@ -185,10 +188,13 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Code\MyHelpers.cshtml" />
+    <Content Include="Areas\Store\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -229,8 +235,15 @@
     <Content Include="Views\Pages\Index.cshtml" />
     <Content Include="Views\Soccer\List.cshtml" />
     <Content Include="Views\Home\Menu.cshtml" />
+    <Content Include="Views\Book\BookSearch.cshtml" />
+    <Content Include="Views\Book\BookSearchParent.cshtml" />
+    <Content Include="Views\Book\JsonSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\Store\Models\" />
+    <Folder Include="Areas\Store\Views\Home\" />
+    <Folder Include="Areas\Store\Views\Shared\" />
+    <Folder Include="Areas\Store\Views\Shop\" />
     <Folder Include="Files\" />
   </ItemGroup>
   <ItemGroup>
